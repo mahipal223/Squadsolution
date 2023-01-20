@@ -1,0 +1,26 @@
+.container-addemployee{
+    border: 1px solid rgb(156, 154, 154);
+    border-radius: 10px;
+}
+.fromMainLabel{
+    font-weight:bolder;
+    
+}
+input {
+
+    
+   
+    box-sizing: border-box;
+    border: none;
+    border-bottom:2px solid rgb(146, 146, 146);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    
+  }
+  
+  input:focus {
+  border-bottom:2px solid rgb(0, 17, 255);
+   
+  }
+  

@@ -1,0 +1,11 @@
+.list-table tr th{
+    padding: 15px 17px  ;
+}
+.list-table tr td{
+    padding: 12px 8px  ;
+}
+.btn-next-prev-div-main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
