@@ -1,0 +1,32 @@
+@model trialMvcProject.Models.Registration
+@{
+   
+    ViewData["Title"] = "Signup";
+}
+<div class="container col-8 mt-5 ">
+    <p class="h3 pb-sm-3">Edit From</p>
+    <form asp-action="Edit" method="post">
+        @Html.HiddenFor(m => m.userid)
+        <div class="form-group row">
+            <label asp-for="userEmail" class="col-sm-3 col-form-label">Email</label>
+            <div class="col-sm-6">
+                <input type="email" asp-for="userEmail" class="form-control"  placeholder="Enter email">
+            </div>
+        </div>
+        <div class="form-group row mt-2">
+            <label asp-for="userPassword" class="col-sm-3 col-form-label">Password</label>
+            <div class="col-sm-6">
+            
+                
+                <input type="password" class="form-control" asp-for="userPassword"  placeholder="Enter password">
+            </div>
+        </div>
+        <div class="form-group row mt-3 ">
+            <div class="offset-3 col-9">
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </div>
+        </div>
+       
+        
+    </form>
+</div>

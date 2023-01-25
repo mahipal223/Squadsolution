@@ -1,0 +1,28 @@
+﻿@model List<trialMvcProject.Models.Registration>
+@{
+
+    ViewData["Title"] = "View Data";
+}
+
+<div class="col-8 d-flex mx-auto mt-5"> 
+    <table class="table text-center table-primary table-bordered">
+        <tr class="table-dark">
+            <td>Email</td>
+            <td>Password</td>
+            <td colspan="2" >Action</td>
+        </tr>
+        @foreach( var item in Model){
+
+        <tr>
+            <td>@item.userEmail</td>
+            <td>@item.userPassword</td>
+            <td><a asp-action="Edit" asp-route-id="@item.userid" class="btn btn-warning">Edit</a></td>
+            <td ><a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.userid">Delete</a></td>
+
+        </tr>
+        }
+    </table>
+</div>
+
+
+
