@@ -1,0 +1,38 @@
+Tables used:
+===========
+1) product (recid, mfrid, description, price, qtyonhand)
+
+2) orders (recid, customerid, orderdate, salesrepsid, productid, qty, amount)
+
+3) customer (recid, company, salesrepsid, creditlimit)
+
+4) salesreps (recid, name, officeid, designation, hiredate, manager, quota, sales, age)
+
+5) office (recid, city, region, manager, targetsales, actualsales)
+
+
+Write queries for following requirements:
+
+
+Q-1	List all the orders which are over Rs.25,000/- including the name of the sales person 	who has taken the order and the name of the customer who has placed that order.
+
+
+Q-2	List out total different customers served by each sales person.
+
+
+Q-3	Calculate total order for each customer of each sales person, sorted by customer and 	within each customer by sales person.
+
+
+Q-4	What is the average order size for each sales person whose order total is more than 	amount Rs.30,000/-.
+
+
+Q-5	List all the sales person who are over 40 in age and who manages a sales person whose 	sales are over quota.
+
+
+Q-6	List all the customers whose sales people are assign to two different offices in the 	"Eastern" sales region.
+
+
+Q-7	List all of the sales persons whose office target sales exceeds the sum of their quota.
+
+
+Q-8	List all the sales people whose average order size for products manufactured by 56 	i.e.(mfrid) is 	higher than the overall average order size.

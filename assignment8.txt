@@ -1,0 +1,57 @@
+Q-1	I want to add 3 days to the current date. Write all possible queries to perform this operation. Explain each one of them.
+
+
+Q-2	I want to add 3 years to the current date. Write all possible queries to perform this operation. Explain each one of them.
+
+
+Q-3	I want to add 3 months to the current date. Write all possible queries to perform this operation. Explain each one of them.
+
+
+Q-4	I want to deduct 2 days from the current date.  Write all possible queries to perform this operation. Explain each one of them.
+
+
+Q-5	Write a query to add 5 days and 15 hours to date and time "2007-01-26 12:30:45".
+
+
+Q-6	Write all possible queries which will return current date.
+
+
+Q-7	Write all possible queries which will return current time.
+
+
+Q-8	Input Date is "2007-01-26 12:30:45". Write queries to output following date formats:
+
+	- "January 26, 2007"
+	- "The 26th of January"
+	- 2007
+	- 07
+	- 26/1/7
+	- 26/01/07
+	- 26/01/2007
+	- 01/26/07
+	- 26/01/07 12:30:45
+	- 26/01/07 12:30:45 PM
+
+
+Q-9	Input Date is "2007-01-26 12:30:45". Write queries to output following date formats:
+
+	- Friday
+	- 26 (Explanation: 26th day of the month)
+	- 6 (Explanation: 6th day of the week)
+	- 26 (Explanation: 26th day of the year)
+
+
+Q-10	Explain UNIX_TIMESTAMP and FROM_UNIXTIME functions with examples.
+
+
+Q-11	Write the output of the following query and explain it.
+
+	SELECT PERIOD_ADD(200601, 3);
+
+
+Q-12	Write the output of the following query and explain it.
+
+	SELECT PERIOD_DIFF(200601, 200609);
+
+
+Q-13	Explain the use of "LAST_INSERT_ID()" function in real life applications.

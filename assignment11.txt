@@ -1,0 +1,92 @@
+Table Used: 
+===========
+student (recid, rollno, fname, sname, surname, admitdate, birthdate, standard, sex)
+
+
+Write a query for following requirement:
+=======================================
+
+Q-1	Display Full Name of all the male students whose first name ends with "h" and are admitted between 1st January 2006 to 1st August 2006.
+
+	Eg:
+
+	|----------------------|
+	|FULL NAME	       |	
+	|----------------------|
+	|Kamlesh Rajubhai Patel|
+	------------------------
+
+	Here "Kamlesh" is the value of 'fname' column, "Rajubhai" of 'sname' and "Patel" of 'surname' column. And first character is in capital for fname, sname, surname and each column value is separated by single space.
+
+
+
+
+
+Tables Used:
+===========
+
+1) product (recid, mfrid, description, price, qtyonhand)
+
+2) orders (recid, customerid, orderdate, salesrepsid, productid, qty, amount)
+
+3) customer (recid, company, salesrepsid, creditlimit)
+
+4) salesreps (recid, name, officeid, designation, hiredate, manager, quota, sales, age)
+
+5) office (recid, city, region, manager, targetsales, actualsales)
+
+
+
+Write queries for below requirements:
+=====================================
+
+Q-1	Find Name of all those sales representatives whose offices are in cities ending with 
+	"pur" and who have atleast 2 customers. The sales representative must be hired before 
+	1st January 2006 and his/her minimum age should be 21 yrs.
+
+	Display fields : Sales Rep. Name, Office City, No. of Customers, Hired on
+
+
+
+Q-2	Find following information for each customer:
+
+	Display fields : Company Name, Sales Rep. Name, Sales Rep. Office City, Company Credit
+
+
+
+Q-3	Find following information for each office:
+
+	Office city, Total Sales Rep., Total sale by all sales Rep.,
+	Target Sales, Actual Sales, Difference of Target and Actual Sales.
+
+	Display fields : Office City, No. of Sales Rep., Total Sale, Target Sales, Actual  Sales, Difference.
+
+
+
+Q-4	Find following information for each product:
+
+	Product description, Price, Quantity on hand, Total no. of 
+	orders for each product, Total quantity ordered, Total amount of the orders for each product.
+
+	Display fields : Description, Price, Quantity, Orders, Quantity, Total Amount
+
+
+
+Q-5	Find order details for all the customers. There will be one row per customer displaying 	
+	total quantity ordered by them and the amount spent by each customer.
+	
+	Display fields : Company Name, Total Quantity Ordered, Total Amount
+
+
+
+Q-6	Display all the sales representatives hired within the past five years from today along with thier Quota and 
+	Sales information.
+	
+	Display fields : Sales Rep. Name, Hired on, Quota, Sales
+	
+
+
+Q-7	Find total number of customers for all the products ordered. There will be one row per 	
+	order displaying product description, and total number of customers who have ordered 	that product.
+
+	Display fields : Product Description, Total No. of Customers who Ordered this Product.

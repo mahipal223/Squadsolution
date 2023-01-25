@@ -1,0 +1,72 @@
+Tables Used:
+===========
+	Table - I :	officestaff
+	Fields	:	recid (Primary Key), name, designation, salary, overtimesalary, bossno, addressid (Reference Key)
+
+
+	Table - II :	address
+	Fields :	recid (Primary Key), address1, address2, city, county, postalcode, country
+
+
+
+Write queries for following requirements:
+
+Q-1	List Name, Designation and Salary of all "officestaff" members.
+
+
+Q-2	List Name and Salary of all the people who are working as "Programmer".
+
+
+Q-3	List all the information about those people who are earning less than Rs.10,000/- .
+
+
+Q-4	List all the information about those staff members who fall in the salary range of 	Rs.5000/- to Rs.10,000/- .
+
+
+Q-5	List Name of all the office staff members in Lower Case.
+
+
+Q-6	List Name of all the office staff members in following format:
+	For example, if name is "umeshbhai" then display it in the format "Umeshbhai".
+
+
+Q-7	List all the information about those people who works for "Nileshbhai".
+
+
+Q-8	List all the information about those members with salary greater than or equal to Rs.3000/- or working directly under "Nileshbhai".
+
+
+Q-9	List Name, Salary, Over-time Salary of all the office staff members.
+
+
+Q-10	Perform above MySQL statement again, but now 0(Zero) should be substituted for NULL in 	Over-time Salary field.
+
+
+Q-11	List Name and Total Monthly Salary (Salary + Over-time Salary) of all the office staff 	members.
+
+
+Q-12	List Name and Total Annual Salary of all the office staff members.
+
+
+Q-13	List Name and Total Daily Salary of all the office staff members. (Consider a month is 	of 30 days).
+
+
+Q-14	List all the information of the person earning Highest Salary (Salary + Over-time 	Salary) in the staff.
+
+
+Q-15	List all the information of the person earning Least Salary (Salary + Over-time Salary) 	in the staff.
+
+
+Q-16	List all the information about those who earn the Highest Salary (Salary + Over-time 	Salary) and those who earn the Least Salary (Salary + Over-time Salary) in the staff.
+
+
+Q-17	List all the information about the person who earns more than his boss.
+
+
+Q-18	List Name, Designation, Salary and City of each staff member.
+
+
+Q-19	Using "address" table list total number of persons residing in "Ahmedabad" city.
+
+
+Q-20	List those City Name where 3 or more than 3 people resides.
