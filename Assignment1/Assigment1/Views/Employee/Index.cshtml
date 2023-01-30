@@ -1,0 +1,27 @@
+@model List<Assigment1.Models.Employee>
+@{
+
+}
+<div class="container">
+    <a asp-action="Create" asp-controller="Employee">Create</a>
+    <table class="table table-info text-center">
+        <tr>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Department</th>
+            <th>Employee Salary</th>
+            <th colspan="2">Action</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmpId</td>
+                <td>@item.EmpName</td>
+                <td>@item.DepId</td>
+                <td>@item.Salary</td>
+                <td><a asp-action="Delete" asp-route-id="@item.EmpId" class="btn btn-danger">Delete</a></td>
+                <td><a asp-action="Edit" asp-route-id="@item.EmpId" class="btn btn-danger">Edit</a></td>
+            </tr>
+        }
+    </table>
+</div>
