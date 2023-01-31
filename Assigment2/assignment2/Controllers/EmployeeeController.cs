@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using assignment2.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace assignment2
 {
@@ -16,25 +17,35 @@ namespace assignment2
         }
         public IActionResult Index()
         {
+
+
             return View(_db.Employeees.ToList());
         }
         public IActionResult Create()
         {
+
+            List<Location> dplist = new List<Location>();
+            dplist = _db.Locations.ToList();
+            ViewBag.list = dplist;
             return View();
         }
-
-
 
         [HttpPost]
         public IActionResult Create(Employeee obj)
         {
-            _db.Employeees.Add(obj);
-            _db.SaveChanges();
-            return RedirectToAction("index");
+            if (ModelState.IsValid)
+            {
+                _db.Employeees.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("index");
+            }
+            return RedirectToAction("create");
         }
         public IActionResult Edit(int id)
         {
-
+            List<Location> dplist = new List<Location>();
+            dplist = _db.Locations.ToList();
+            ViewBag.list = dplist;
             var x = _db.Employeees.Find(id);
             return View(x);
         }

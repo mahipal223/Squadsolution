@@ -1,0 +1,16 @@
+@model assignment3.Models.Registration
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            @{
+                foreach (var items in ViewBag.logindata)
+                {
+                    <p>@items.fi</p>
+                }
+            }
+
+        </div>
+    </div>
+</div>

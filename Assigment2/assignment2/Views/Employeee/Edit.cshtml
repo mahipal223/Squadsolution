@@ -42,8 +42,10 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="WorkLocation" class="control-label"></label>
-                        <input asp-for="WorkLocation" class="form-control" />
-                        <span asp-validation-for="WorkLocation" class="text-danger"></span>
+                            <select asp-items="@(new SelectList(@ViewBag.list,"Address", "Address"))"
+                            asp-for="WorkLocation" class="form-control" selected="@Model.WorkLocation">
+                            <option value="0">-- select --</option>
+                        </select>
                     </div>
                     <div class="form-group mt-3">
                         <input type="submit" value="Save" class="btn btn-primary" />
