@@ -5,12 +5,19 @@
     <div class="row">
         <div class="col-12">
             @{
+
+                <p>@ViewBag.firstName1 @ViewBag.lastName1</p>
                 foreach (var items in ViewBag.logindata)
                 {
-                    <p>@items.fi</p>
+                    <p>Add On This <span class="fw-bold">@items.DateAdded</span></p>
+                    if (@items.LastUpadated != null)
+                    {
+                        <p>Last Updated <span class="fw-bold">@items.LastUpadated</span></p>
+                    };
+                    <a asp-action="Update" asp-route-id="@items.RecId" class="btn btn-dark">Update</a>
                 }
             }
-
+ <a asp-action="Logout" class="btn btn-primary">Logout</a>
         </div>
     </div>
 </div>
