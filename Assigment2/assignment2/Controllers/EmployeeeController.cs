@@ -18,7 +18,7 @@ namespace assignment2
         public IActionResult Index()
         {
 
-
+            ViewBag.data2 = _db.Employeees.Where(x => x.IsActive == false).ToList();
             return View(_db.Employeees.ToList());
         }
         public IActionResult Create()
@@ -61,6 +61,16 @@ namespace assignment2
             var x = _db.Employeees.Find(id);
             _db.Employeees.Remove(x);
             _db.SaveChanges();
+            return RedirectToAction("index");
+        }
+        public IActionResult SoftDelete(int id)
+        {
+            var e = _db.Employeees.Find(id);
+            if (e != null)
+            {
+                e.IsActive = false;
+                _db.SaveChanges();
+            }
             return RedirectToAction("index");
         }
     }
