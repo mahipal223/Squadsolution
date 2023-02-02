@@ -13,6 +13,8 @@ namespace Assignment4.Models
         public string? HaveKnow { get; set; }
         public int? Salary { get; set; }
         public DateTime? JoiningDate { get; set; }
+        public int? ReportingPerson { get; set; }
+
 
         public virtual Department1? Department { get; set; }
         public virtual Designation1 Designation { get; set; } = null!;
