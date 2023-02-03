@@ -17,7 +17,7 @@
         <hr />
         <div class="row">
             <div class="col-md-4">
-                <form asp-action="Create">
+                <form asp-action="Edit">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
                         <label asp-for="FirstName" class="control-label"></label>
@@ -33,8 +33,8 @@
                         <label asp-for="DesignationId" class="control-label">Designation </label>
                        <div>
                           @foreach (var item in ViewBag.DesiV)
-                        {                 
-                            <input type="radio" name="DesignationId" value="@item.DesId"/>@item.DesName
+                        {        
+                               <input asp-for="DesignationId"  type="radio" value="@item.DesId"/>@item.DesName;
                         }
                        </div>
                     </div>
@@ -48,13 +48,17 @@
                         <div>
                         @for (int i = 0; i < Model.HaveKnowleadeof.Count; i++)
                         {
-                                <input asp-for="HaveKnowleadeof[i].Value" class="form-control" type="hidden" />
+                            
+                            
+                            
+                                <input asp-for="HaveKnowleadeof[i].Value" class="form-control" type="hidden"  />
                                 <input asp-for="HaveKnowleadeof[i].Text" class="form-control" type="hidden"
                                 value="@Model.HaveKnowleadeof[i].Text" />
-                                <input asp-for="HaveKnowleadeof[i].Selected" type="checkbox" />
+                                <input asp-for="HaveKnowleadeof[i].Selected" type="checkbox"  value="@Model.HaveKnowleadeof[i].Value" />
                             
                              <label for="HaveKnowleadeof[i].Selected">@Model.HaveKnowleadeof[i].Text</label>
                             ;
+                            
 
                         }
                         </div>

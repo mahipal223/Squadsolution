@@ -1,9 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Assignment4.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Assignment4.Models
+namespace Assignment4.ViewModel
 {
-    public partial class Employee1
+    public class EmplyeeViewModel
     {
         public int EmpId { get; set; }
         public string FirstName { get; set; } = null!;
@@ -15,6 +19,8 @@ namespace Assignment4.Models
         public DateTime? JoiningDate { get; set; }
         public int? ReportingPerson { get; set; }
         public bool? IsActive { get; set; }
+
+        public IList<SelectListItem> HaveKnowleadeof { get; set; }
 
         public virtual Department1? Department { get; set; }
         public virtual Designation1 Designation { get; set; } = null!;
