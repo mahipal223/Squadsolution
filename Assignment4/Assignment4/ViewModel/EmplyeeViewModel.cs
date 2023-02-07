@@ -17,7 +17,7 @@ namespace Assignment4.ViewModel
         public string? HaveKnow { get; set; }
         public int? Salary { get; set; }
         public DateTime? JoiningDate { get; set; }
-        public int? ReportingPerson { get; set; }
+        public string? ReportingPerson { get; set; }
         public bool? IsActive { get; set; }
 
         public IList<SelectListItem> HaveKnowleadeof { get; set; }

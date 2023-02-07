@@ -19,17 +19,17 @@
             <div class="col-md-4">
                 <form asp-action="Create">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <label asp-for="FirstName" class="control-label"></label>
                         <input asp-for="FirstName" class="form-control" />
                         <span asp-validation-for="FirstName" class="text-danger"></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <label asp-for="LastName" class="control-label"></label>
                         <input asp-for="LastName" class="form-control" />
                         <span asp-validation-for="LastName" class="text-danger"></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <label asp-for="DesignationId" class="control-label">Designation </label>
                        <div>
                           @foreach (var item in ViewBag.DesiV)
@@ -38,12 +38,12 @@
                         }
                        </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <label asp-for="DepartmentId" class="control-label"></label>
                         <select asp-for="DepartmentId" class="form-control"
                             asp-items="@(new SelectList(@ViewBag.DeparmentV,"DepId","DepartmentName"))"></select>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <label class="control-label">Have Kownleadge Of</label>
                         <div>
                         @for (int i = 0; i < Model.HaveKnowleadeof.Count; i++)
@@ -60,30 +60,31 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <label asp-for="Salary" class="control-label"></label>
                         <input asp-for="Salary" class="form-control" />
                         <span asp-validation-for="Salary" class="text-danger"></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <label asp-for="JoiningDate" class="control-label"></label>
                         <input asp-for="JoiningDate" class="form-control" />
                         <span asp-validation-for="JoiningDate" class="text-danger"></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <label asp-for="ReportingPerson" class="control-label"></label>
                         <select asp-for="ReportingPerson" class="form-control"
                             asp-items="@(new SelectList(@ViewBag.Empv,"EmpId","FirstName"))"></select>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <input type="submit" value="Create" class="btn btn-primary" />
+                        <a asp-action="Index" class="btn btn-dark">Cancel</a>
                     </div>
                 </form>
             </div>
         </div>
 
         <div>
-            <a asp-action="Index">Back to List</a>
+            
         </div>
 
     </body>

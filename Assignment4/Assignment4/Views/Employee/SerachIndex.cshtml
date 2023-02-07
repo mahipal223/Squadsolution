@@ -1,0 +1,133 @@
+@model Assignment4.ViewModel.EmplyeeViewModel
+
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>SearchIndex</title>
+    </head>
+
+    <body>
+
+        <h4 class="text-center">Search Employee</h4>
+        <hr class="w-75 mx-auto" />
+        <div class="row  d-flex justify-content-center">
+            <div class="col-md-8">
+                <form asp-action="SerachIndex">
+                    <div class="row mt-3">
+                        <div class="col-md-6 ">
+                            <div class="form-group">
+                                <label asp-for="FirstName" class="control-label"></label>
+                                <input asp-for="FirstName" class="form-control" />
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="form-group">
+                                <label asp-for="LastName" class="control-label"></label>
+                                <input asp-for="LastName" class="form-control" />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <label asp-for="DepartmentId" class="control-label">Department</label>
+                            <select asp-for="DepartmentId" class="form-control"
+                                asp-items="@(new SelectList(@ViewBag.DeparmentV,"DepId","DepartmentName"))">
+                                <option value="0">--select--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <label class="control-label">Have Kownleadge Of</label>
+                            <div>
+                            @for (int i = 0; i
+                                < Model.HaveKnowleadeof.Count; i++)
+                            {
+                                    <input asp-for="HaveKnowleadeof[i].Value" class="form-control" type="hidden" />
+                                    <input asp-for="HaveKnowleadeof[i].Text" class="form-control" type="hidden"
+                                    value="@Model.HaveKnowleadeof[i].Text" />
+                                    <input asp-for="HaveKnowleadeof[i].Selected" type="checkbox" />
+
+                                    <label for="HaveKnowleadeof[i].Selected">@Model.HaveKnowleadeof[i].Text</label>
+                                ;
+
+                            }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="JoiningDate" class="control-label"></label>
+                                <input asp-for="JoiningDate" class="form-control" />
+                                <span asp-validation-for="JoiningDate" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div>TO</div>
+                            <input asp-for="JoiningDate" class="form-control" />
+                        </div>
+
+
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="submit" value="Search" class="btn btn-primary" />
+                        <a  asp-action="Reset"  class="btn btn-dark" >Reset</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row mt-5">
+                <div class="col-12">
+                    <table class="table table-info" id="mytable">
+                        <thead>
+                            <tr>
+                                <th>First name</th>
+                                <th>Last name</th>
+                                <th>Salary</th>
+                                <th>Joining Date</th>
+                                <th>Department</th>
+                                <th>Designation</th>
+                                <th>Reporting Person</th>
+
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @if (ViewBag.viewdata != null)
+                        {
+                            @foreach (var item in ViewBag.viewdata)
+                            {
+                                    <tr>
+                                        <td>@item.FirstName</td>
+                                        <td>@item.LastName</td>
+                                        <td>@item.Salary</td>
+                                        <td>@item.JoiningDate</td>
+                                        <td>@item.Department.DepartmentName</td>
+                                        <td>@item.Designation.DesName</td>
+                                        <td>@item.ReportingPerson</td>
+                                         <td>
+                                                <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.EmpId">Edit</a>
+                                            @* <a asp-action="Details" asp-route-id="@item.EmpId">Details</a> | *@
+                                                <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.EmpId">Delete</a>
+                                            </td>
+                                    </tr>
+                            }}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

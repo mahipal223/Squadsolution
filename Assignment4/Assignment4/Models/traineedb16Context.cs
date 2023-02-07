@@ -7,6 +7,9 @@ namespace Assignment4.Models
 {
     public partial class traineedb16Context : DbContext
     {
+        public traineedb16Context()
+        {
+        }
 
         public traineedb16Context(DbContextOptions<traineedb16Context> options)
             : base(options)
@@ -18,6 +21,14 @@ namespace Assignment4.Models
         public virtual DbSet<Employee1> Employee1s { get; set; } = null!;
         public virtual DbSet<HaveKnowledge1> HaveKnowledge1s { get; set; } = null!;
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=WIN-390Q81UT43Q\\SQLEXPRESS2017;Database=traineedb16;User Id=traineedb16;Password=SODNczmwT5aIH8Xu;TrustServerCertificate=True");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -80,7 +91,10 @@ namespace Assignment4.Models
                     .IsUnicode(false)
                     .HasColumnName("lastName");
 
-                entity.Property(e => e.ReportingPerson).HasColumnName("reportingPerson");
+                entity.Property(e => e.ReportingPerson)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("reportingPerson");
 
                 entity.Property(e => e.Salary).HasColumnName("salary");
 
