@@ -19,9 +19,9 @@
             </select>
         </div>
         <div class="form-group col-5 mt-3" id="textBoxShow" hidden>
-            <label id="textBoxShow" hidden class="pb-1 fw-bold">Add New Depatment :</label>
-            <input asp-for="Departments.DepartmentName" id="textBoxShow" hidden class="form-control" />
-            <span asp-validation-for="Departments.DepartmentName" id="textBoxShow" hidden class="text-danger"></span>
+            <label id="textBoxShow" class="pb-1 fw-bold">Add New Depatment :</label>
+            <input asp-for="Departments.DepartmentName" id="textBoxShow" class="form-control" />
+            <span asp-validation-for="Departments.DepartmentName" id="textBoxShow" class="text-danger"></span>
         </div>
         <div class="form-group col-5 mt-3">
             <label asp-for="Salary" class="pb-1 fw-bold">Salary :</label>
@@ -38,6 +38,7 @@
     function change(id) {
         var x = document.getElementById("textBoxShow");
         var dropDown = document.getElementById("DepId");
+        console.log("click on new add")
         if (id == 0) {
             x.hidden = false;
         }

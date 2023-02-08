@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Assigment1.Data;
 using Assigment1.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace Assigment1.Controllers
@@ -21,7 +22,7 @@ namespace Assigment1.Controllers
         }
         public IActionResult Index()
         {
-            return View(_db.Employees.ToList());
+            return View(_db.Employees.Include(x => x.Departments).ToList());
         }
         public IActionResult Create()
         {
@@ -40,9 +41,20 @@ namespace Assigment1.Controllers
                 _db.Departments.Add(e.Departments);
                 _db.SaveChanges();
 
+                _db.Employees.Add(e);
+                _db.SaveChanges();
+
             }
-            _db.Employees.Add(e);
-            _db.SaveChanges();
+            else
+            {
+                Employee emp = new Employee();
+                emp.EmpName = e.EmpName;
+                emp.DepId = e.DepId;
+                emp.Salary = e.Salary;
+                _db.Employees.Add(emp);
+                _db.SaveChanges();
+            }
+
             return RedirectToAction("index");
         }
         public IActionResult Delete(int id)
@@ -68,9 +80,29 @@ namespace Assigment1.Controllers
             {
                 _db.Departments.Add(od.Departments);
                 _db.SaveChanges();
+                _db.Employees.Update(od);
+                _db.SaveChanges();
             }
-            _db.Entry(od).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            _db.SaveChanges();
+            else
+            {
+
+
+
+
+
+
+
+
+
+
+                Employee emp = new Employee();
+                emp.EmpId = od.EmpId;
+                emp.EmpName = od.EmpName;
+                emp.DepId = od.DepId;
+                emp.Salary = od.Salary;
+                _db.Employees.Update(emp);
+                _db.SaveChanges();
+            }
             return RedirectToAction("index");
 
         }

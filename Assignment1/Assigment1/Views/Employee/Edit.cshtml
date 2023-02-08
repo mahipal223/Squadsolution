@@ -6,6 +6,7 @@
         <div class="form-group col-5">
             <label asp-for="EmpName" class="pb-1 fw-bold">Employee Name :</label>
             <input asp-for="EmpName" class="form-control" />
+            <input asp-for="EmpId" type="hidden" class="form-control" />
             <span asp-validation-for="EmpName" class="text-danger"></span>
         </div>
         <div class="mt-3">

@@ -17,7 +17,7 @@
             <tr>
                 <td>@item.EmpId</td>
                 <td>@item.EmpName</td>
-                <td>@item.DepId</td>
+                <td>@item.Departments.DepartmentName</td>
                 <td>@item.Salary</td>
                 <td><a asp-action="Delete" asp-route-id="@item.EmpId" class="btn btn-danger">Delete</a></td>
                 <td><a asp-action="Edit" asp-route-id="@item.EmpId" class="btn btn-danger">Edit</a></td>

@@ -17,6 +17,8 @@ namespace Assignment4.ViewModel
         public string? HaveKnow { get; set; }
         public int? Salary { get; set; }
         public DateTime? JoiningDate { get; set; }
+
+        public DateTime? JoiningDate1 { get; set; }
         public string? ReportingPerson { get; set; }
         public bool? IsActive { get; set; }
 

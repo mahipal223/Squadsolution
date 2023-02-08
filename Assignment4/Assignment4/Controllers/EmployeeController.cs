@@ -319,6 +319,10 @@ namespace Assignment4.Controllers
                 HttpContext.Session.SetString("SessionEmpDeptId", Empvm.DepartmentId.ToString());
 
             }
+            else if (Empvm.JoiningDate != null || Empvm.JoiningDate1 != null)
+            {
+                ViewBag.viewdata = _db.Employee1s.Where(m => m.JoiningDate >= Empvm.JoiningDate && m.JoiningDate <= Empvm.JoiningDate1).Include(m => m.Department).Include(m => m.Designation).ToList();
+            }
             var arry = new string[7];
             string havearry2 = "";
             for (int i = 0; i < Empvm.HaveKnowleadeof.Count; i++)
