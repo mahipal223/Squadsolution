@@ -47,11 +47,10 @@ namespace assignment3.Controllers
         [HttpPost]
         public IActionResult Login(Registration obj)
         {
-            obj.Email = EnryptString(obj.Email);
-            obj.Password = EnryptString(obj.Password);
             if (obj.Email != null && obj.Password != null)
-
             {
+                obj.Email = EnryptString(obj.Email);
+                obj.Password = EnryptString(obj.Password);
 
                 var students = _db.Registrations.Where(m => m.Email == obj.Email && m.Password == obj.Password).FirstOrDefault();
                 if (students != null)

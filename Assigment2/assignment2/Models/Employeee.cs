@@ -16,6 +16,7 @@ namespace assignment2.Models
         public string? FirstName { get; set; }
         [Required]
         public string? LastName { get; set; }
+        [Required]
         public int? ContactNo { get; set; }
         public string? HomeAddress { get; set; }
         public string? WorkLocation { get; set; }

@@ -1,0 +1,51 @@
+@model Assigment1.Models.Employee
+
+
+<div class="container row d-flex flex-column">
+    <form asp-action="Edit" method="post">
+        <div class="form-group col-5">
+            <label asp-for="EmpName" class="pb-1 fw-bold">Employee Name :</label>
+            <input asp-for="EmpName" class="form-control" />
+            <input asp-for="EmpId" type="hidden" class="form-control" />
+            <span asp-validation-for="EmpName" class="text-danger"></span>
+        </div>
+        <div class="mt-3">
+            <label asp-for="Departments" class="pb-1 fw-bold">Department Name :</label>
+            <select asp-for="DepId" selected="@(Model.DepId)"
+                asp-items="@(new SelectList(@ViewBag.list,"DepId", "DepartmentName"))" onchange="change(this.value)">
+                <option default>--Select--</option>
+                <option value="0">New Add</option>
+            </select>
+        </div>
+        <div class="form-group col-5 mt-3" id="textBoxShow" hidden>
+            <label asp-for="Departments.DepartmentName" class="pb-1 fw-bold">Add New Depatment :</label>
+            <input asp-for="Departments.DepartmentName" id="departmentNameText" class="form-control" />
+            <span asp-validation-for="Departments.DepartmentName" class="text-danger"></span>
+        </div>
+        <div class="form-group col-5 mt-3">
+            <label asp-for="Salary" class="pb-1 fw-bold">Salary :</label>
+            <input asp-for="Salary" class="form-control" />
+            <span asp-validation-for="Salary" class="text-danger"></span>
+        </div>
+        <div>
+            <input type="submit" value="Submit" class="btn btn-primary mt-3">
+        </div>
+    </form>
+</div>
+
+<script>
+    function change(id) {
+        var x = document.getElementById("textBoxShow");
+        var x2 = document.getElementById("departmentNameText");
+
+        var dropDown = document.getElementById("DepId");
+        if (id == 0) {
+            x.hidden = false;
+
+        }
+        else {
+            x.hidden = true;
+            x2.Required = false;
+        }
+    }
+</script>

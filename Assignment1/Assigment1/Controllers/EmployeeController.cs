@@ -35,27 +35,37 @@ namespace Assigment1.Controllers
         [HttpPost]
         public IActionResult Create(Employee e)
         {
-            if (e.DepId == 0)
+            if (e.EmpName != null)
             {
+                if (e.DepId == 0)
+                {
 
-                _db.Departments.Add(e.Departments);
-                _db.SaveChanges();
+                    _db.Departments.Add(e.Departments);
+                    _db.SaveChanges();
 
-                _db.Employees.Add(e);
-                _db.SaveChanges();
+                    _db.Employees.Add(e);
+                    _db.SaveChanges();
 
+                }
+                else
+                {
+                    Employee emp = new Employee();
+                    emp.EmpName = e.EmpName;
+                    emp.DepId = e.DepId;
+                    emp.Salary = e.Salary;
+                    _db.Employees.Add(emp);
+                    _db.SaveChanges();
+                }
+                TempData["msg"] = "<script>alert('Registration succesfully')</script>";
+                return RedirectToAction("index");
             }
             else
             {
-                Employee emp = new Employee();
-                emp.EmpName = e.EmpName;
-                emp.DepId = e.DepId;
-                emp.Salary = e.Salary;
-                _db.Employees.Add(emp);
-                _db.SaveChanges();
+                List<Department> dplist = new List<Department>();
+                dplist = _db.Departments.ToList();
+                ViewBag.list = dplist;
+                return View();
             }
-
-            return RedirectToAction("index");
         }
         public IActionResult Delete(int id)
         {
@@ -76,6 +86,7 @@ namespace Assigment1.Controllers
         public IActionResult Edit(Employee od)
         {
 
+
             if (od.DepId == 0)
             {
                 _db.Departments.Add(od.Departments);
@@ -86,15 +97,6 @@ namespace Assigment1.Controllers
             else
             {
 
-
-
-
-
-
-
-
-
-
                 Employee emp = new Employee();
                 emp.EmpId = od.EmpId;
                 emp.EmpName = od.EmpName;
@@ -103,6 +105,7 @@ namespace Assigment1.Controllers
                 _db.Employees.Update(emp);
                 _db.SaveChanges();
             }
+            TempData["msg"] = "<script>alert('update succesfully')</script>";
             return RedirectToAction("index");
 
         }

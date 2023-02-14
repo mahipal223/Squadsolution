@@ -1,0 +1,22 @@
+@model List<Assigment1.Models.Department>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container">
+    <a asp-action="Create" asp-controller="Department">Create</a>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Department Name</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DepId</td>
+                <td>@item.DepartmentName</td>
+                <td><a asp-action="Delete" asp-route-id="@item.DepId" class="btn btn-danger">Delete</a></td>
+                <td><a asp-action="Edit" asp-route-id="@item.DepId" class="btn btn-danger">Edit</a></td>
+            </tr>
+        }
+    </table>
+</div>
