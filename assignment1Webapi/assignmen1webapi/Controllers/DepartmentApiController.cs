@@ -23,5 +23,20 @@ namespace assignmen1webapi.Controllers
 
             return Ok(_db.Departments.ToList());
         }
+        [HttpPost]
+        public IActionResult Post(Department dpj)
+        {
+            _db.Departments.Add(dpj);
+            _db.SaveChanges();
+            return Ok("Data Inserted");
+        }
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            var result = _db.Departments.Find(id);
+            _db.Departments.Remove(result);
+            _db.SaveChanges();
+            return Ok();
+        }
     }
 }
