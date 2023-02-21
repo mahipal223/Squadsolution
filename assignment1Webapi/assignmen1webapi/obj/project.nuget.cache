@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mPLr1qYmvDym2pKCFuJwDtw4Ccy0xMAJigXd0UmJL0FfNqhe9EzXNPz5YEH812xTsqqKKyUU5Y0fFC+yEHcHeg==",
+  "dgSpecHash": "XLcdj0TVnxfxZbJgvr0/mGhNQKmoRAN6JHUuAd6fOE/EDhjvstgAxcwqkl91H5dOh+lziIIyY9C9RzIflOE7mQ==",
   "success": true,
   "projectFilePath": "D:\\.net\\assignment1Webapi\\assignmen1webapi\\assignmen1webapi.csproj",
   "expectedPackageFiles": [
@@ -43,6 +43,7 @@
     "C:\\Users\\T2-89\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\T2-89\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\T2-89\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\T2-89\\.nuget\\packages\\newtonsoft.json\\8.0.1\\newtonsoft.json.8.0.1.nupkg.sha512",
     "C:\\Users\\T2-89\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\T2-89\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\T2-89\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
@@ -78,5 +79,26 @@
     "C:\\Users\\T2-89\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\T2-89\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "assignmen1webapi depends on Newtonsoft.Json (>= 7.0.2) but Newtonsoft.Json 7.0.2 was not found. An approximate best match of Newtonsoft.Json 8.0.1 was resolved.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Newtonsoft.Json 8.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

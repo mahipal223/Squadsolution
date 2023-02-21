@@ -80,3 +80,4 @@ D:\.net\assignment1Webapi\assignmen1webapi\obj\Debug\net6.0\refint\assignmen1web
 D:\.net\assignment1Webapi\assignmen1webapi\obj\Debug\net6.0\assignmen1webapi.pdb
 D:\.net\assignment1Webapi\assignmen1webapi\obj\Debug\net6.0\assignmen1webapi.genruntimeconfig.cache
 D:\.net\assignment1Webapi\assignmen1webapi\obj\Debug\net6.0\ref\assignmen1webapi.dll
+D:\.net\assignment1Webapi\assignmen1webapi\bin\Debug\net6.0\Newtonsoft.Json.dll

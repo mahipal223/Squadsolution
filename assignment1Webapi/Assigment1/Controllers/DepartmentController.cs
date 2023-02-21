@@ -58,7 +58,6 @@ namespace Assigment1.Controllers
             }
             return View();
         }
-        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
 
@@ -77,7 +76,42 @@ namespace Assigment1.Controllers
             }
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> Edit(int id)
+        {
+
+            using (HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseurl);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var result = JsonConvert.DeserializeObject<Department>(await client.GetStringAsync("/api/DepartmentApi/" + id.ToString()));
 
 
+                if (result != null)
+                {
+                    return View(result);
+                }
+
+            }
+            return RedirectToAction("Index");
+
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(Department obj)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseurl);
+                var updatetask = client.PutAsJsonAsync<Department>("/api/DepartmentApi/", obj);
+                updatetask.Wait();
+                var result = updatetask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("index");
+                }
+
+            }
+            return View();
+        }
     }
 }

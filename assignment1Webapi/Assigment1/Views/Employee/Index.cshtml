@@ -15,7 +15,7 @@
             <tr>
                 <td>@item.EmpId</td>
                 <td>@item.EmpName</td>
-                <td>@item.Departments.DepartmentName</td>
+                <td>@item.DepId</td>
                 <td>@item.Salary</td>
                 <td><a asp-action="Delete" new { onclick="return confirm('Are sure wants to delete Id @item.EmpId');" }
                     asp-route-id="@item.EmpId" class="btn btn-danger">Delete</a></td>

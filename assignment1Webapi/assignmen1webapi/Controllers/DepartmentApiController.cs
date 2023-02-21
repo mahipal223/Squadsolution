@@ -30,11 +30,40 @@ namespace assignmen1webapi.Controllers
             _db.SaveChanges();
             return Ok("Data Inserted");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             var result = _db.Departments.Find(id);
             _db.Departments.Remove(result);
+            _db.SaveChanges();
+            return Ok();
+        }
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+
+            try
+            {
+                if (id != null)
+                {
+                    var x = _db.Departments.Find(id);
+                    return Ok(x);
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+        }
+        [HttpPut]
+        public IActionResult update(Department dp)
+        {
+            _db.Entry(dp).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             _db.SaveChanges();
             return Ok();
         }

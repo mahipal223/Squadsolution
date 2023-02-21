@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Assigment1/Assigment1.csproj",
+                "${workspaceFolder}/Assigment1.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Assigment1/Assigment1.csproj",
+                "${workspaceFolder}/Assigment1.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Assigment1/Assigment1.csproj"
+                "${workspaceFolder}/Assigment1.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

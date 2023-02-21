@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Assignment2Mvc/1.0.0": {
+        "dependencies": {
+          "Assignment2.model": "1.0.0"
+        },
+        "runtime": {
+          "Assignment2Mvc.dll": {}
+        }
+      },
+      "Assignment2.model/1.0.0": {
+        "runtime": {
+          "Assignment2.model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Assignment2Mvc/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Assignment2.model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
