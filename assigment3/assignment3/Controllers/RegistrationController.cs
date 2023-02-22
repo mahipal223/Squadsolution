@@ -122,7 +122,6 @@ namespace assignment3.Controllers
             rs.Password = DecryptString(x.Password);
             rs.DateAdded = x.DateAdded;
             rs.LastUpadated = x.LastUpadated;
-
             return View(rs);
         }
         [HttpPost]

@@ -1,0 +1,21 @@
+@model IEnumerable<assignment3.Models.Registration>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            @{
+
+                <p>@ViewBag.firstName @ViewBag.lastName</p>
+                  <p>Add On This <span class="fw-bold">@ViewBag.dataadded</span></p>
+                    if (@ViewBag.lastupadted != null)
+                    {
+                        <p>Last Updated <span class="fw-bold">@ViewBag.lastupadted</span></p>
+                    };
+                    <a asp-action="Update"  class="btn btn-dark">Update</a>
+                
+            }
+ <a asp-action="Logout" asp-controller="Registration" class="btn btn-primary">Logout</a>
+        </div>
+    </div>
+</div>

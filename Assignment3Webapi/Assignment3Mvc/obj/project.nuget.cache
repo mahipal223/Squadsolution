@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YKDVsO1x2AXMdgqOV9otwGNXl9BxpIjE1yDOw3v/3sa3Gy7kq2lJ3eR57rwIoCMk+sco6BI3Dr4/rBw5+38SUA==",
+  "success": true,
+  "projectFilePath": "D:\\.net\\Assignment3Webapi\\Assignment3Mvc\\Assignment3Mvc.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\T2-89\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
