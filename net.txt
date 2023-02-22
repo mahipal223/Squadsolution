@@ -1,0 +1,55 @@
+<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
+<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.3">
+<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
+<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.3" />
+<PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.2-mauipre.1.22054.8" />
+
+
+
+*******connection string *******************
+
+builder.Services.AddDbContext<Traineedb16Context>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+
+"ConnectionStrings": {
+    "DefaultConnection": "Server=WIN-390Q81UT43Q\\SQLEXPRESS2017;Database=traineedb16;User Id=traineedb16;Password=SODNczmwT5aIH8Xu;TrustServerCertificate=True"
+  }
+
+*********************************************
+Scaffolding in .net 
+
+
+dotnet ef dbcontext scaffold "Server=WIN-390Q81UT43Q\SQLEXPRESS2017;Database=traineedb16;User Id=traineedb16;Password=SODNczmwT5aIH8Xu;TrustServerCertificate=True"
+Microsoft.EntityFrameworkCore.SqlServer --table Employee1 --table Designation1 --table HaveKnowledge1 
+--table Department1  -o Models -f
+
+
+*********************************************
+
+dotnet tool install --global dotnet-aspnet-codegenerator --version 6.0.5
+dotnet aspnet-codegenerator View Edit Edit -m EmplyeeViewModel  -dc traineedb16Context -outDir Views/Employee //Ex
+dotnet aspnet-codegenerator view Create Create  -m Location -dc Traineedb16Context -outDir Views/Location     //Ex	
+
+*********************************************
+
+dotnet new -l   //for use list template in .net app
+dotnet new mvc -n Assignment4  //for new create app
+dotnet run   //for normal run
+dotnet watch run // hotreload feature autosave
+dotnet build   //app build
+
+*********************************************
+dotnet tool install --global dotnet-ef  //install global dotnet-ef tools
+dotnet ef migrations add intialstate   // add migrations in app {intialstate is name of migration}
+dotnet ef database update		//after migration add then update database
+dotnet ef migrations remove            //remove migrations
+
+
+********************************************
+<PackageReference Include="Newtonsoft.Json" Version="7.0.2" />
