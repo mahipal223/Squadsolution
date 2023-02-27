@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Get Api With Ajax
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered" id="Table">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+            
+        </table>
+
+    </div>
+
+</div>
+
+@* <script src="../../wwwroot/lib/jquery/dist/jquery.min.js"></script> *@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        Manager.GetAllDepartments();
+    });
+
+    var Manager={
+        GetAllDepartments:function(){
+            var obj ="";
+            var serviceUrl="https://localhost:7295/api/DepartmentApi/GetAll";
+            window.Manager.GetAPI(serviceUrl ,onSuccess, onFailed);
+            function onSuccess(jsonData)
+            {
+                obj.jsonData;
+                $.each(jsonData,function (i,item){
+                    
+                    var rows="<tr>"+
+                        "<td>"+item.DeptId+"<td>"+
+                        "<td>"+item.DeptName+"<td>"+
+                            "</tr>";
+                            $('#Table').append(rows);
+
+                });
+            }
+            function onFailed(error)
+            {
+                window.alert(error.statusText);
+            }
+            return obj;
+        },
+        GetAPI : function(serviceUrl,successCallBack,errorCallback)
+        {
+            $.ajax({
+                type:"GET",
+                url:serviceUrl,
+                dataType:"json",
+                success:successCallBack,
+                error:errorCallback
+            });
+        },
+    }
+
+
+</script>

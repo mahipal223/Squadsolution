@@ -10,9 +10,9 @@ namespace Assignment4.ViewModel
     public class EmplyeeViewModel
     {
         public int EmpId { get; set; }
-        public string FirstName { get; set; } = null!;
+        public string? FirstName { get; set; }
         public string? LastName { get; set; }
-        public int DesignationId { get; set; }
+        public int? DesignationId { get; set; }
         public int? DepartmentId { get; set; }
         public string? HaveKnow { get; set; }
         public int? Salary { get; set; }
@@ -25,6 +25,6 @@ namespace Assignment4.ViewModel
         public IList<SelectListItem> HaveKnowleadeof { get; set; }
 
         public virtual Department1? Department { get; set; }
-        public virtual Designation1 Designation { get; set; } = null!;
+        public virtual Designation1? Designation { get; set; }
     }
 }

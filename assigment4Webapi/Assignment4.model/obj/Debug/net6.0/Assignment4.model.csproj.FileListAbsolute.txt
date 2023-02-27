@@ -1,0 +1,12 @@
+d:\.net\assigment4Webapi\Assignment4.model\bin\Debug\net6.0\Assignment4.model.deps.json
+d:\.net\assigment4Webapi\Assignment4.model\bin\Debug\net6.0\Assignment4.model.dll
+d:\.net\assigment4Webapi\Assignment4.model\bin\Debug\net6.0\Assignment4.model.pdb
+d:\.net\assigment4Webapi\Assignment4.model\obj\Debug\net6.0\Assignment4.model.csproj.AssemblyReference.cache
+d:\.net\assigment4Webapi\Assignment4.model\obj\Debug\net6.0\Assignment4.model.GeneratedMSBuildEditorConfig.editorconfig
+d:\.net\assigment4Webapi\Assignment4.model\obj\Debug\net6.0\Assignment4.model.AssemblyInfoInputs.cache
+d:\.net\assigment4Webapi\Assignment4.model\obj\Debug\net6.0\Assignment4.model.AssemblyInfo.cs
+d:\.net\assigment4Webapi\Assignment4.model\obj\Debug\net6.0\Assignment4.model.csproj.CoreCompileInputs.cache
+d:\.net\assigment4Webapi\Assignment4.model\obj\Debug\net6.0\Assignment4.model.dll
+d:\.net\assigment4Webapi\Assignment4.model\obj\Debug\net6.0\refint\Assignment4.model.dll
+d:\.net\assigment4Webapi\Assignment4.model\obj\Debug\net6.0\Assignment4.model.pdb
+d:\.net\assigment4Webapi\Assignment4.model\obj\Debug\net6.0\ref\Assignment4.model.dll
