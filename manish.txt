@@ -1,0 +1,35 @@
+Controllers Location
+---------------------
+Presentation
+    ->HybridAPI
+        ->Controllers
+            ->KFI/Master
+                -><actual Controllers> Interface Declaration Location for Method in Controllers (BAL Interface Declaration)
+------------------------------------------------------------------------------------
+Core
+    ->Services
+        ->IServices
+            ->HybridBTL
+                ->KFI/Master
+                    -><actual Interface Declaration>(BTL Interface Declaration)  BTL Interface Implementation Location(BAL Interface Implementation)
+-------------------------------------------------------------------
+Core
+    ->Services
+        ->Services
+            ->HybridBTL
+                ->KFI/Master
+                    -><actual Interface Implementation> Interface Declaration Location for Method in BTL Interface(DAL Interface Declaration)
+------------------------------------------------------------------------------------
+core
+    ->Repositories
+        ->IRepositories
+            ->HybridBTL
+                ->KFI/Master
+                    -><actual Interface Declaration>
+Interface Implementation Location for Method in BTL Interface (DAL Interface Implementation) --------------------------------------------------------------------------------------------
+core
+    ->Repositories
+        ->Repositories
+            ->HybridBTL
+                ->KFI/Master
+                    -><actual Interface Implementation>has context menu

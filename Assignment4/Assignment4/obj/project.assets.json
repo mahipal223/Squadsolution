@@ -9829,11 +9829,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\.net\\Assignment4\\Assignment4\\Assignment4.csproj",
+      "projectUniqueName": "D:\\.net\\Assignment4\\Assignment4\\Assignment4.csproj",
       "projectName": "Assignment4",
-      "projectPath": "d:\\.net\\Assignment4\\Assignment4\\Assignment4.csproj",
+      "projectPath": "D:\\.net\\Assignment4\\Assignment4\\Assignment4.csproj",
       "packagesPath": "C:\\Users\\T2-89\\.nuget\\packages\\",
-      "outputPath": "d:\\.net\\Assignment4\\Assignment4\\obj\\",
+      "outputPath": "D:\\.net\\Assignment4\\Assignment4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\T2-89\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -9902,7 +9902,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

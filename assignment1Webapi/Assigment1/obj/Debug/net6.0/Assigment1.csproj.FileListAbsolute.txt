@@ -163,3 +163,8 @@ D:\.net\assignment1Webapi\Assigment1\obj\Debug\net6.0\scopedcss\projectbundle\As
 D:\.net\assignment1Webapi\Assigment1\obj\Debug\net6.0\Assigment1.csproj.CopyComplete
 D:\.net\assignment1Webapi\Assigment1\obj\Debug\net6.0\Assigment1.genruntimeconfig.cache
 D:\.net\assignment1Webapi\Assigment1\obj\Debug\net6.0\ref\Assigment1.dll
+D:\.net\assignment1Webapi\Assigment1\obj\Debug\net6.0\staticwebassets\msbuild.Assigment1.Microsoft.AspNetCore.StaticWebAssets.props
+D:\.net\assignment1Webapi\Assigment1\obj\Debug\net6.0\staticwebassets\msbuild.build.Assigment1.props
+D:\.net\assignment1Webapi\Assigment1\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Assigment1.props
+D:\.net\assignment1Webapi\Assigment1\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Assigment1.props
+D:\.net\assignment1Webapi\Assigment1\obj\Debug\net6.0\staticwebassets.pack.json

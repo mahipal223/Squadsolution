@@ -1,0 +1,66 @@
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table id="table1">
+    <tr>
+        <td>Deparment id</td>
+        <td>Deparment name</td>
+    </tr>
+
+</table>
+<table class="mt-5">
+    <tr>
+        <td>
+            Deparment Name
+        </td>
+    </tr>
+    <tr>
+        <td><input type="text" name="depname" id="depname"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Submit" id='add'></td>
+    </tr>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        console.log("ready");
+        $.ajax({
+            url: 'https://localhost:7123/api/DepartmentApi',
+            type: 'Get',
+            contentType: 'application/json',
+            success: function (result, status, xhr) {
+                console.log(result);
+                $.each(result, function (key, value) {
+                    var rows = "<tr>" +
+                        "<td>" + value.depId + "</td>" +
+                        "<td>" + value.departmentName + "</td>" +
+                        "<td><input type='button' value='update' id='update'></td></td>" +                        
+                        "<td><input type='button' value='Delete' id='delete'></td></td>" +                        
+                        "</tr>";
+                    $("#table1").append(rows);
+                })
+            }
+
+        });
+        $("#add").click(function () {
+            var dep = new Object();
+            dep.departmentName = $("#depname").val();
+            debugger
+            if(dep.departmentName!=" "){
+            $.ajax({
+
+                url: 'https://localhost:7123/api/DepartmentApi',
+                type: 'post',
+                contentType: 'application/json',
+                data: JSON.stringify(dep),
+                dataType: 'json',
+                success: function (data,status,xhr) {
+
+                }
+            });
+            }
+        });
+    });
+</script>
