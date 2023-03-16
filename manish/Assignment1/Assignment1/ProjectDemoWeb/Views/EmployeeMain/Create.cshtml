@@ -1,0 +1,120 @@
+@model ProjectDemoWeb.Data.EmployeeMain
+@{
+  ViewData["Title"] = "Create";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<div>
+  <div style="margin-left: 200;">
+    <a class="btn btn-success" id="Add_new_Emp">Add New</a>
+  </div>
+  <form  asp-action="Create" asp-controller="EmployeeMainController">
+    <div class="row">
+      
+        <div class="form-group mx-sm-3 col-3 mb-2">
+          <label  class="sr-only">Enter the FirstName</label>
+          <input type="text" class="form-control" id="FirstName1" name="FirstName1">
+        </div>
+        <div class="form-group mx-sm-3 col-3 mb-2">
+          <label  class="sr-only">Enter the LastName</label>
+          <input type="text"  class="form-control" id="LastName1" name="LastName1">
+      
+      </div>
+    </div>
+    @* add new Employee data *@
+    <div id="AddNewEmp">
+
+    </div>
+
+    <div class="form-group mx-sm-3 col-3 mb-2">
+      <label for="ContectNo" class="sr-only">Enter the Contect No</label>
+      <input type="text" class="form-control" id="ContectNo" name="ContectNo">
+    </div>
+    <div class="form-group mx-sm-3 col-3 mb-2">
+      <label for="CompanyLocation" class="sr-only">Enter the Company Location</label>
+      <input type="text" class="form-control" id="CompanyLocation" name="CompanyLocation">
+    </div>
+    <div class="form-group mx-sm-3 col-3 mb-2">
+      <label for="" class="sr-only">Address</label><br>
+      <textarea name="Address" id="Address">
+
+    </textarea>
+    </div>
+    <button type="submit" id="btnInserEmp" class="btn btn-primary mb-2">Submit</button>
+  </form>
+</div>
+
+
+<script>
+
+  
+        var count=1;
+        $("#Add_new_Emp").click(function () {
+        
+
+          var rows = '\
+                      <div class="row">\
+                        <div class="form-group mx-sm-3 col-3 mb-2">\
+                          <label class="sr-only">Enter the FirstName</label>\
+                          <input type="text" class="form-control" id="FirstName'+[count+1]+'" name="FirstName'+[count+1]+'">\
+                        </div>\
+                        <div class="form-group mx-sm-3 col-3 mb-2">\
+                          <label class="sr-only">Enter the LastName</label>\
+                          <input type="text" class="form-control" id="LastName'+[count+1]+'" name="LastName'+[count+1]+'">\
+                        </div>\
+                         @* <span class="btn btn-danger h-auto">X</span>\ *@
+                        </div>';
+          debugger
+
+             console.log(count++);
+          $("#AddNewEmp").append(rows);
+
+
+
+         
+        })
+
+    
+
+$(document).ready(function () {
+    $("#btnInserEmp").click(function () {
+      debugger
+      var EmployeeMain = new Object();
+      var Emp =[];
+      @* EmployeeMain.FirstName = $('#FirstName').val();
+      EmployeeMain.LastName = $('#LastName').val(); *@
+       EmployeeMain.ContectNo = $('#ContectNo').val();
+     EmployeeMain.CompanyLocation = $('#CompanyLocation').val();
+     EmployeeMain.Address = $('#Address').val();
+      for(let i=1;i<=count;i++)
+      {
+        
+        //console.log(count[i]);
+        Emp.push([
+          FirstName1 = $("#FirstName1").val(),
+          LastName1 = $("#LastName1").val() 
+        ]);
+        //EmployeeMain.push();
+      }
+    
+        @* var EmplyeeFullName =new Object(); *@
+      debugger
+      alert("manish");
+      $.ajax({
+        //url: '/EmployeeMain/Create',
+        url: 'http://localhost:5034/EmployeeMain/Create',
+        type: 'POST',
+        contentType: 'Application/json',
+        data: JSON.stringify(EmployeeMain),
+
+        success: function (data, textStatus, xhr) {
+          debugger
+          alert("Your Data is successfully Inserted");
+          //window.location.replace("");
+
+        }      })
+    })
+  });
+</script>
+
+
