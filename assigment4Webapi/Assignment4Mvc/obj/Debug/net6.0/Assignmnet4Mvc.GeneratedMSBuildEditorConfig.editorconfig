@@ -5,56 +5,57 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Assignmnet4Mvc
 build_property.RootNamespace = Assignmnet4Mvc
-build_property.ProjectDir = D:\.net\assigment4Webapi\Assignment4Mvc\
+build_property.ProjectDir = d:\.net\assigment4Webapi\Assignment4Mvc\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\.net\assigment4Webapi\Assignment4Mvc
+build_property.MSBuildProjectDirectory = d:\.net\assigment4Webapi\Assignment4Mvc
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/.net/assigment4Webapi/Assignment4Mvc/Views/Employee/Create.cshtml]
+[d:/.net/assigment4Webapi/Assignment4Mvc/Views/Employee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/assigment4Webapi/Assignment4Mvc/Views/Employee/Edit.cshtml]
+[d:/.net/assigment4Webapi/Assignment4Mvc/Views/Employee/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/assigment4Webapi/Assignment4Mvc/Views/Employee/Index.cshtml]
+[d:/.net/assigment4Webapi/Assignment4Mvc/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/assigment4Webapi/Assignment4Mvc/Views/Employee/SerachIndex.cshtml]
+[d:/.net/assigment4Webapi/Assignment4Mvc/Views/Employee/SerachIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcU2VyYWNoSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/assigment4Webapi/Assignment4Mvc/Views/Home/Index.cshtml]
+[d:/.net/assigment4Webapi/Assignment4Mvc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/assigment4Webapi/Assignment4Mvc/Views/Home/Privacy.cshtml]
+[d:/.net/assigment4Webapi/Assignment4Mvc/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/assigment4Webapi/Assignment4Mvc/Views/Shared/Error.cshtml]
+[d:/.net/assigment4Webapi/Assignment4Mvc/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/assigment4Webapi/Assignment4Mvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+[d:/.net/assigment4Webapi/Assignment4Mvc/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/assigment4Webapi/Assignment4Mvc/Views/_ViewImports.cshtml]
+[d:/.net/assigment4Webapi/Assignment4Mvc/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/assigment4Webapi/Assignment4Mvc/Views/_ViewStart.cshtml]
+[d:/.net/assigment4Webapi/Assignment4Mvc/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/assigment4Webapi/Assignment4Mvc/Views/Shared/_Layout.cshtml]
+[d:/.net/assigment4Webapi/Assignment4Mvc/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-gbuwdewfe2
